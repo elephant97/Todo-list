@@ -3,13 +3,14 @@ todolist 개발
 
 
 ## 환경 구성
-# [window 환경]
 
-# <기본 설치>
+[window 환경]
+
+<기본 설치>
 1. pychan(3.9 이상 설치)
 2. ananconda 설치
 
-# <Django 설치>
+<Django 설치>
 1. cmd 열기
 2. 가상환경 셋팅 할 폴더로 이동
 3. 가상환경 확인 명령어 
@@ -25,7 +26,7 @@ todolist 개발
 7. Django 설치 확인
     : python -m django --verion
     
-# <git 프로젝트 구성>
+<git 프로젝트 구성>
 1. github에서 레포지토리 생성하기
 2. 생성된 레포지토리 링크 복사
 3. 위에서 설치 한 가상환경에서 git clone 만들기
@@ -36,7 +37,7 @@ todolist 개발
      : django-admin startproject <프로젝트 명> 
 5.  .gitignore 파일 생성(깃 허브에 파일 업로드 시 올리지 않을 파일을 .gitignore파일 안에 작성하면 됨)
 
-# <git ssh 설정>
+<git ssh 설정>
 1.  git bash열기
 2.  ssh-keygen -t rsa -C "github 아이디" 입력
 3.  2번 입력 시 key 파일이 저장한 위치가 출력 됨

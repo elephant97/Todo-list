@@ -1,3 +1,26 @@
 from django.db import models
 
 # Create your models here.
+
+class TodoList(models.Model):
+    no = models.AutoField(primary_key=True)
+    pcode = models.CharField(max_length=4)
+    user_id = models.CharField(max_length=50, blank=True, null=True)
+    title = models.CharField(max_length=200, blank=True, null=True)
+    content = models.CharField(max_length=1000, blank=True, null=True)
+    is_complete = models.IntegerField(blank=True, null=True)
+    priority = models.IntegerField(blank=True, null=True)
+    end_date = models.DateField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'todo_list'
+
+class ProjectCode(models.Model):
+    pcode = models.CharField(primary_key=True, max_length=4)
+    pname = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'project_code'
+

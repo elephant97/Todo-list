@@ -1,4 +1,3 @@
-#from django.conf.urls import url, include
 from django.urls import path, include
 from django.urls.resolvers import URLPattern
 from . import views
@@ -6,11 +5,10 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-app_name = 'todo_main'
+app_name = 'todo_board'
 
 urlpatterns = [
-    #path(r'^$', views.Todo_main.as_view(), name='todo_main'),
-    path('', views.Todo_main.as_view(), name='todo_main'),
+    path('', views.Todo_board.as_view(), name='todo_board'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

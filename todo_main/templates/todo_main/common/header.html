@@ -9,22 +9,31 @@
         <script src="{% static 'js/Sortable.js' %}"></script>
         <script src="{% static 'js/app.js' %}"></script>
 
-        <script>
+        <script></script>
 
-        </script>
-        <!--        <style type="text/css">
-            #container{
+            <style type="text/css">
+            #container {
                 min-width: 310px;
                 max-width: 800px;
                 height: 400px;
                 margin: 0 auto
             }
-                </style> -->
+            input[type=text] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              box-sizing: border-box;
+            }
+
+            .list-group-item{
+                width : 40%;
+            }
+		    </style>
     </head>
     <body>
 
     </body>
     {% block main %} <!-- 블록 개념이며, 이 블록을 상속 받은 자식 템플릿이 구현 해 줌-->
-
+    
     {% endblock main %}
  </html>

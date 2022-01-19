@@ -12,9 +12,13 @@ class TodoList(models.Model):
     priority = models.IntegerField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
 
+    def todo_save(self):
+        self.save()
+        
     class Meta:
         managed = False
         db_table = 'todo_list'
+
 
 class ProjectCode(models.Model):
     pcode = models.CharField(primary_key=True, max_length=4)
@@ -23,4 +27,5 @@ class ProjectCode(models.Model):
     class Meta:
         managed = False
         db_table = 'project_code'
+
 

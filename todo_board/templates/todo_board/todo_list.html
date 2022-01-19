@@ -3,13 +3,13 @@
 {% block main %} 
 
 <div class="col-md-12">
-    <div class="container">
-
-    {% for list in todo_list %}
+        <button type="button" class="btn btn-primary" onclick="location.href='{% url 'todo_board:todo_board_insert' %} '">
+            일정추가
+        </button>   
+    <!--{% for list in todo_list %}
         {{ list.title}} <br>
         {{ list.user_id}} <br>
-    {% endfor %}
-    </div>
+    {% endfor %}-->
 </div>
 
 {% endblock main %} 

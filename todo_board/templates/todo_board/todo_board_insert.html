@@ -1,0 +1,15 @@
+{% extends 'todo_main/common/header.html' %}<!-- 해당 위치의 파일을 상속하겠다는 의미  main block에 자식 템플릿이 구현을 하는 영역-->
+{% load static %}
+{% block main %}
+
+<div class"col-md-12">
+    <div class="container">
+        <form method="POST" class="post-form" action="{% url 'todo_board:todo_board_insert' %}">
+        {%csrf_token%}
+
+        {{form.as_p}}
+        <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
+</div>
+{% endblock main%}

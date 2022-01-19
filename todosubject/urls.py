@@ -26,7 +26,10 @@ urlpatterns = [
 
     #board app
     path('board/', include('todo_board.urls')),
+   # path('insert/', include('todo_board.urls')),
+
 ]
+
 
 '''urlpatterns = [
     path('admin/', admin.site.urls),

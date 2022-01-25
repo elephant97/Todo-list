@@ -3,13 +3,20 @@
 {% block main %} 
 
 <div class="col-md-12">
-        <button type="button" class="btn btn-primary" onclick="location.href='{% url 'todo_board:todo_board_insert' %} '">
+    <div class="container">
+        <div id="example1" class="list-group col">
+            {%for list in todo_list %}
+                <div class="list-group-item"><input type="checkbox" name={{list.title}} value={{list.title}}> <a href='{% url 'todo_board:todo_board_detail' pk=list.no %}'> {{list.title}} </a></div>
+                    
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+       <button type="button" class="btn btn-primary" onclick="location.href='{% url 'todo_board:todo_board_insert' %} '">
             일정추가
-        </button>   
-    <!--{% for list in todo_list %}
-        {{ list.title}} <br>
-        {{ list.user_id}} <br>
-    {% endfor %}-->
+        </button>
+    </div>  
+
 </div>
 
 {% endblock main %} 

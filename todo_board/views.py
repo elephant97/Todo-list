@@ -8,11 +8,16 @@ from django.views import View
 from django.views import generic
 
 #class Todo_board(generic, TemplateView):
-class Todo_board(View):
+class Todo_board(generic.TemplateView):
     def get(self, request, *args, **kwargs):
         template_name = 'todo_board/todo_list.html'
         todo_list = TodoList.objects.all()
         return render(request, template_name, {"todo_list": todo_list})
+
+class Todo_board_detail(generic.DetailView):
+    model=TodoList
+    template_name='todo_board/todo_board_detail.html'
+    context_object_name='todo_list'
 
 def check_post(request):
     template_name = 'todo_board/todo_board_success.html'

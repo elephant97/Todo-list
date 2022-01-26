@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.urls.resolvers import URLPattern
 
 from todo_main import urls
@@ -12,7 +12,8 @@ app_name = 'todo_board'
 urlpatterns = [
     path('', views.Todo_board.as_view(), name='todo_board'),
     path('insert/', views.check_post, name='todo_board_insert'),
-    path('^(?P<pk>[0-9]+)/detail/$', views.Todo_board_detail.as_view(), name='todo_board_detail')
+    path('^(?P<pk>[0-9]+)/detail/$', views.Todo_board_detail.as_view(), name='todo_board_detail'),
+    path('^(?P<pk>[0-9]+)/update/$', views.Todo_board_update.as_view(), name='todo_board_update')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

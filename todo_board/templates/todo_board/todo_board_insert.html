@@ -3,13 +3,14 @@
 {% block main %}
 
 <div class"col-md-12">
-    <div class="container">
+    <center><div class="container">
         <form method="POST" class="post-form" action="{% url 'todo_board:todo_board_insert' %}">
         {%csrf_token%}
 
         {{form.as_p}}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" value="Submit">Save</button>
+        <button type="button" value="BACK" onclick="history.go(-1)">Cancle</button>
         </form>
-    </div>
+    </div></center>
 </div>
 {% endblock main%}

@@ -3,10 +3,13 @@
 {% block main %}
 <section id="blog">
     <div class="container">
-        {{todo_list}}
-        <h2>{{ todo_list.title }}</h2>
-        <p>{{todo_list.content | linebreaksbr}}</p>
-        <h2><a href='{% url 'todo_board:todo_board_update' pk=todo_list.pk %}'>수정</a></h2>
+        <!--{{todo_list}}-->
+        <center><h2>{{ todo_list.title }}</h2></center>
+        <center><p>{{todo_list.content | linebreaksbr}}</p></center>
+        <center><p>마감기한:{{todo_list.end_date | linebreaksbr}}</p></center>
+        <center><p><a href='{% url 'todo_board:todo_board_update' pk=todo_list.pk %}'>수정</a>
+        <a href='{% url 'todo_board:todo_board_delete' pk=todo_list.pk %}'>삭제</a></p></center>
+
     </div>
 </section>
 
